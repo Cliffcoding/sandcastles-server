@@ -6,5 +6,8 @@ module.exports = {
 	},
 	addNewSandcastle(sandcastle) {
 		return knex('sandcastles').insert(sandcastle, '*');
+	},
+	deleteSandcastle(id){
+		return knex('sandcastles').where('id', id).del();
 	}
 };

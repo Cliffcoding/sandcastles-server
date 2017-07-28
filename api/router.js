@@ -21,6 +21,13 @@ router.post('/sandcastles', (req,res,next) => {
 		});
 	});
 });
+router.delete('/sandcastles/:id', (req,res,next) => {
+	queries.deleteSandcastle(req.params.id).then(response => {
+		res.json({
+			response
+		})
+	})
+})
 
 
 module.exports = router;
