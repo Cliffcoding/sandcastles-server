@@ -6,8 +6,8 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/sandcastles'
 	},
-  production: {
-  client: 'pg',
-  connection: process.env.DATABASE_URL
-}
+	  production: {
+	  client: 'pg',
+	  connection: process.env.DATABASE_URL
+	}
 };
